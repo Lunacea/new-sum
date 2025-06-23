@@ -2,34 +2,12 @@
 
 import { useState } from 'react';
 import { NewsSummary, Reference } from '@/types/index';
+import { sampleSummaries, sampleReferences } from '@/mocks/data/topics';
 
 // 初心者向け：サンプルデータ
 // TODO: サンプルデータを別ファイルに移動し、importするようにする
 // TODO: サンプルデータをデータベースから取得するようにする
-const sampleReferences: Reference[] = [
-  {
-    id: '1',
-    title: 'NHKニュース',
-    link: 'https://www.nhk.or.jp',
-    referencedAt: '2024-01-15'
-  },
-  {
-    id: '2',
-    title: '朝日新聞',
-    link: 'https://www.asahi.com',
-    referencedAt: '2024-01-15'
-  }
-];
 
-const sampleSummaries: NewsSummary[] = [
-  {
-    id: '1',
-    title: 'テクノロジー業界の最新動向',
-    content: 'AI技術の進歩により、様々な業界で変革が起きています。表示文字列に制限をつけて...',
-    createdAt: '2024-01-15',
-    topicId: '4'
-  }
-];
 
 export default function NewsSummaryList() {
   // 折り畳み状態を管理

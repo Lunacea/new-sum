@@ -2,16 +2,11 @@
 
 import { useState } from 'react';
 import { Topic } from '@/types/index';
+import { sampleTopics } from '@/mocks/data/topics';
 
 // 初心者向け：サンプルデータ（実際のAPIの代わり）
 // TODO: サンプルデータを別ファイルに移動し、importするようにする
 // TODO: サンプルデータをデータベースから取得するようにする
-const sampleTopics: Topic[] = [
-  { id: '1', name: '政治', category: '政治' },
-  { id: '2', name: '経済', category: '経済' },
-  { id: '3', name: 'スポーツ', category: 'スポーツ' },
-  { id: '4', name: 'テクノロジー', category: 'テクノロジー' },
-];
 
 export default function SetSummarize() {
   // 選択されたトピックを管理する状態

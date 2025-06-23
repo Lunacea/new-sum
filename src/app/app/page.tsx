@@ -6,6 +6,7 @@ import NewsSummaryList from '@/components/NewsSummaryList';
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-50">
+      {/* TODO: 不要なセクションを削除する */}
       {/* アプリ概要セクション */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-8">
         <div className="container mx-auto px-4 text-center">
@@ -18,7 +19,7 @@ export default function App() {
 
       {/* メインコンテンツ */}
       <main className="container mx-auto px-4 py-8 space-y-8">
-        
+
         {/* SetSummarize セクション */}
         <section>
           <SetSummarize />

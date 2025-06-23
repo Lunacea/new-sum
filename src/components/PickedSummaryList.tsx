@@ -1,9 +1,5 @@
-import { NewsSummary } from '@/types/index';
-import { sampleSummaries } from '@/mocks/data/topics';
-// 初心者向け：サンプルデータ
-// TODO: サンプルデータを別ファイルに移動し、importするようにする
-// TODO: サンプルデータをデータベースから取得するようにする
-
+// TODO: DBから取得するようにする
+import { sampleSummaries } from '@/mocks/data/summaries';
 
 export default function PickedSummaryList() {
   return (

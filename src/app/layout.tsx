@@ -28,15 +28,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <MantineProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <MantineProvider>
+
           <Header />
           {children}
           <Footer />
-        </body>
-      </MantineProvider>
+        </MantineProvider>
+      </body>
     </html>
   );
 }

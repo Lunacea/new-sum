@@ -1,4 +1,6 @@
-// 開発初心者向け：基本的な型定義
+// TODO: ニュース要約に関する型を定義する
+// TODO: データベース設計を行い、型を定義する
+
 // トピックの型
 export interface Topic {
   id: string;
@@ -6,6 +8,7 @@ export interface Topic {
   category: string;
 }
 
+// TODO: topicIdをTopic型から取得するようにする
 // ニュース要約の型
 export interface NewsSummary {
   id: string;
@@ -21,4 +24,4 @@ export interface Reference {
   title: string;
   link: string;
   referencedAt: string;
-} 
+}

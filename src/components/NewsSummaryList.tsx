@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { NewsSummary, Reference } from '@/types/index';
 
 // 初心者向け：サンプルデータ
+// TODO: サンプルデータを別ファイルに移動し、importするようにする
+// TODO: サンプルデータをデータベースから取得するようにする
 const sampleReferences: Reference[] = [
   {
     id: '1',
@@ -43,12 +45,12 @@ export default function NewsSummaryList() {
         <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
         <h2 className="text-xl font-bold text-slate-800">NewsSummaryList</h2>
       </div>
-      
+
       {/* Topics フィルター */}
       <div className="mb-8">
         <h3 className="font-semibold text-slate-700 mb-3">Topics</h3>
         <p className="text-slate-600 text-sm mb-3">Topicsでフィルタリング可能にする</p>
-        <select 
+        <select
           value={filterTopic}
           onChange={(e) => setFilterTopic(e.target.value)}
           className="w-full p-3 border-2 border-slate-200 rounded-lg focus:border-orange-500 focus:ring-2 focus:ring-orange-200 transition-colors"
@@ -67,7 +69,7 @@ export default function NewsSummaryList() {
           <div key={summary.id} className="bg-slate-50 border border-slate-200 rounded-lg p-5">
             {/* Title */}
             <h4 className="font-semibold text-slate-800 text-lg mb-3">{summary.title}</h4>
-            
+
             {/* CreatedAt - 日付降順に表示 */}
             <div className="flex items-center gap-2 mb-3">
               <div className="w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
@@ -75,23 +77,22 @@ export default function NewsSummaryList() {
                 作成日: {summary.createdAt}
               </span>
             </div>
-            
+
             {/* ArticleSummary - 表示文字列に制限をつける */}
             <p className="text-slate-600 mb-4 leading-relaxed">
-              {summary.content.length > 50 
-                ? `${summary.content.substring(0, 50)}...` 
+              {summary.content.length > 50
+                ? `${summary.content.substring(0, 50)}...`
                 : summary.content
               }
             </p>
-            
+
             {/* PickToggleButton - お気に入り登録/解除 */}
             <button
               onClick={() => setIsFavorite(!isFavorite)}
-              className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                isFavorite 
-                  ? 'bg-yellow-100 text-yellow-800 border border-yellow-300 hover:bg-yellow-200' 
-                  : 'bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200'
-              }`}
+              className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${isFavorite
+                ? 'bg-yellow-100 text-yellow-800 border border-yellow-300 hover:bg-yellow-200'
+                : 'bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200'
+                }`}
             >
               {isFavorite ? '★ お気に入り解除' : '☆ お気に入り登録'}
             </button>
@@ -102,7 +103,7 @@ export default function NewsSummaryList() {
       {/* References */}
       <div>
         <h3 className="font-semibold text-slate-700 mb-4">References</h3>
-        
+
         {/* DropdownButton - 折り畳み可能にする */}
         <button
           onClick={() => setIsReferencesOpen(!isReferencesOpen)}
@@ -117,7 +118,7 @@ export default function NewsSummaryList() {
             </span>
           </div>
         </button>
-        
+
         {/* 折り畳み可能な参考文献リスト */}
         {isReferencesOpen && (
           <div className="mt-4 space-y-3">
@@ -140,4 +141,4 @@ export default function NewsSummaryList() {
       </div>
     </div>
   );
-} 
+}

@@ -1,6 +1,8 @@
 import { NewsSummary } from '@/types/index';
 
 // 初心者向け：サンプルデータ
+// TODO: サンプルデータを別ファイルに移動し、importするようにする
+// TODO: サンプルデータをデータベースから取得するようにする
 const sampleSummaries: NewsSummary[] = [
   {
     id: '1',
@@ -10,7 +12,7 @@ const sampleSummaries: NewsSummary[] = [
     topicId: '1'
   },
   {
-    id: '2', 
+    id: '2',
     title: '経済ニュース要約',
     content: '経済市場の動向について...',
     createdAt: '2024-01-14',
@@ -25,7 +27,7 @@ export default function PickedSummaryList() {
         <div className="w-3 h-3 bg-green-500 rounded-full"></div>
         <h2 className="text-xl font-bold text-slate-800">PickedSummaryList</h2>
       </div>
-      
+
       {/* 整理サマリ群 */}
       <div className="mb-8">
         <h3 className="font-semibold text-slate-700 mb-4">整理サマリ群</h3>
@@ -57,4 +59,4 @@ export default function PickedSummaryList() {
       </div>
     </div>
   );
-} 
+}
